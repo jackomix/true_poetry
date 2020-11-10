@@ -517,8 +517,10 @@ model = GPT2LMHeadModel.from_pretrained('gpt2')
 xprint("model loaded")
 #-----------------------------------------------
 #from here on must be run every time you want to create a new poem. If you want to generate multiple poems, maybe wrap this in a while-loop?
-while (true):
-    print('-true_poetry-----------------------------------')
+print("------------------------------")
+print("-        true  poetry        -")
+while True:
+    print("------------------------------")
     seed(params.random_seed)
     with torch.no_grad():
         raw_prompt = input("starting prompt: ")
