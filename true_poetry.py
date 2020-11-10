@@ -28,7 +28,7 @@ params.punctuation_probability_threshold = .001
 params.model_name = "gpt2-xl" # change this to "gpt2-xl" to get started. "poetry" requires a lot more effort to get running-- see the README for details.
 params.stuck_counter_limit = 1000
 params.one_syllable_suppression = 20
-debug = True
+debug = False
 
 def xprint(*args, **kwargs):
     #only prints if "debug" is turned on. It has a try block so that it never throws errors of its own.
@@ -513,7 +513,7 @@ stress_dictionary = create_stress_dictionary()
 stress_tokens = pickle.load( open("stress_tokens.p", "rb"))
 xprint("rhymes loaded")
 #load gpt-2 (takes a few seconds)                
-model = GPT2LMHeadModel.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained('gpt2-xl')
 xprint("model loaded")
 #-----------------------------------------------
 #from here on must be run every time you want to create a new poem. If you want to generate multiple poems, maybe wrap this in a while-loop?
