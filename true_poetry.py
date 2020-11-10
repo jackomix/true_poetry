@@ -513,7 +513,7 @@ stress_dictionary = create_stress_dictionary()
 stress_tokens = pickle.load( open("stress_tokens.p", "rb"))
 xprint("rhymes loaded")
 #load gpt-2 (takes a few seconds)                
-model = GPT2LMHeadModel.from_pretrained(params.model_name)
+model = GPT2LMHeadModel.from_pretrained('gpt2')
 xprint("model loaded")
 #-----------------------------------------------
 #from here on must be run every time you want to create a new poem. If you want to generate multiple poems, maybe wrap this in a while-loop?
